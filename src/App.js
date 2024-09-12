@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+// import News from './components/PractiveNews';
+import News from './components/News';
+// import React from 'react';
+// import React, { useEffect, useState } from 'react';
 
-function App() {
+export default function App() {
+  var url = 'https://jsonplaceholder.typicode.com/users'
+
+  var req = new Request(url);
+
+  fetch(req).then(function (response) {
+    console.log(response.json());
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <div className="container">
+          <Navbar />
+        </div>
       </header>
-    </div>
-  );
+
+      <section className='news-section'>
+        <div className="container">
+          <News />
+        </div>
+      </section>
+
+      
+
+    </>
+  )
 }
 
-export default App;
+
+
