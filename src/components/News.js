@@ -8,7 +8,7 @@ export default function NewsCompo() {
   const [error, setError] = useState(null); // Add an error state
 
   useEffect(() => {
-    const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=bff29035664f47eb8d2d49a74676924c';
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
 
     fetch(url)
       .then((response) => {
