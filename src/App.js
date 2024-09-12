@@ -6,13 +6,13 @@ import News from './components/News';
 // import React, { useEffect, useState } from 'react';
 
 export default function App() {
-  var url = 'https://jsonplaceholder.typicode.com/users'
+  // var url = 'https://jsonplaceholder.typicode.com/users'
 
-  var req = new Request(url);
+  // var req = new Request(url);
 
-  fetch(req).then(function (response) {
-    console.log(response.json());
-  })
+  // fetch(req).then(function (response) {
+  //   console.log(response.json());
+  // })
 
 
   return (
