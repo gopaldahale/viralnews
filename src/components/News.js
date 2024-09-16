@@ -47,7 +47,7 @@ export default function NewsCompo() {
                 imgUrl={article.urlToImage ? article.urlToImage : placeholderImage}
                 title={article.title.slice(0, 40)}
                 description={typeof article.description === 'string' ? (article.description.length > 40 ? article.description.slice(0, 88) + '...' : article.description) : ''}
-                newsUrl={article.url} // Use article.url instead of article.id
+                newsUrl={article.url} 
               />
             </div>
           ))
