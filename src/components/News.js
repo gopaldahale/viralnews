@@ -5,13 +5,13 @@ import placeholderImage from '../img/image-placeholder.jpg';
 export default function NewsCompo() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true); // Add a loading state
-  const [error, setError] = useState(null); // Add an error state
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
     // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=9cb45c816ff64e5993f4498a1564e2c1`;
-    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
-    console.log("API Key:", apiKey);
+    // const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+    // console.log("API Key:", apiKey);
 
     // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 
@@ -42,6 +42,7 @@ export default function NewsCompo() {
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
+        setError(error.message); 
         setLoading(false);
       }
     };
