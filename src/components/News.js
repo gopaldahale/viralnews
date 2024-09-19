@@ -9,11 +9,11 @@ export default function NewsCompo() {
 
   useEffect(() => {
     // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`;
-    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=9cb45c816ff64e5993f4498a1564e2c1`;
-    // const apiKey = process.env.REACT_APP_NEWS_API_KEY;
-    // console.log("API Key:", apiKey);
+    // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=9cb45c816ff64e5993f4498a1564e2c1`;
+    const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+    console.log("API Key:", apiKey);
 
-    // const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
 
       fetch(url)
       .then((response) => {
